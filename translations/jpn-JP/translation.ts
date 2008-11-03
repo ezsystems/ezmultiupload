@@ -18,7 +18,7 @@
         <translation>エラー</translation>
     </message>
     <message>
-        <source>Thumbnail Created.</source>
+        <source>Thumbnail created.</source>
         <translation>サムネイルを作成しました。</translation>
     </message>
     <message>

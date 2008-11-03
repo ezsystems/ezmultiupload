@@ -22,7 +22,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Thumbnail Created.</source>
+        <source>Thumbnail created.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

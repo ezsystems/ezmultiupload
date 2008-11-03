@@ -45,7 +45,7 @@
                                    fileType: '{$file_types}',
                                    progressBarWidth: '300',
                                    allFilesRecived: '{'All files received.'|i18n('extension/ezmultiupload')}',
-                                   thumbnailCreated: '{'Thumbnail Created.'|i18n('extension/ezmultiupload')}'
+                                   thumbnailCreated: '{'Thumbnail created.'|i18n('extension/ezmultiupload')}'
                                 {rdelim};
 
     YAHOO.ez.MultiUpload.init();
