@@ -20,7 +20,8 @@ YAHOO.ez.MultiUpload = (function() {
            fadeAnimate('multiuploadProgress' , 0, 1);
         }
         Dom.setStyle('multiuploadProgressBar' , 'width', 0);
-
+        Dom.get('multiuploadProgressMessage').innerHTML = "";
+        
         for(var i in e.fileList) {
             this.queue.push(e.fileList[i]);
         }
@@ -37,14 +38,11 @@ YAHOO.ez.MultiUpload = (function() {
     };
 
     var onUploadProgress = function(e, cfg) {
-        var progress = Math.round(100 * (e['bytesLoaded'] / e['bytesTotal'])),
-            widthRate = Math.round(cfg.progressBarWidth / this.queue.length),
-            currentWidth = Math.round(widthRate * (progress * 0.01)),
-            newWidth = parseInt(currentWidth) + parseInt((Dom.getStyle('multiuploadProgressBar', 'width')).split('px')[0]);
-        
-        if(newWidth < widthRate * (this.uploadCounter + 1)) {
-            widthAnimate('multiuploadProgressBar', newWidth);
-        }
+        var progress = Math.round((100 * e['bytesLoaded']) / e['bytesTotal']),
+            currentWidth = Math.round((cfg.progressBarWidth * progress) / 100),
+            totalWidth = parseInt(currentWidth) + parseInt((Dom.getStyle('multiuploadProgressBar', 'width')).split('px')[0]);
+
+            widthAnimate('multiuploadProgressBar', totalWidth);
     };
 
     var onUploadComplete = function(e, cfg) {
@@ -55,14 +53,13 @@ YAHOO.ez.MultiUpload = (function() {
 
             var fileID = this.queue[this.uploadCounter]['id'];
             this.upload(fileID, cfg.uploadURL, 'POST', cfg.uploadVars);
+            Dom.setStyle('multiuploadProgressBar' , 'width', 0);
         } else {
             this.uploadCounter = 0;
             this.queue = [];
 
             Dom.get('uploadButton').disabled = false;
             Dom.get('multiuploadProgressMessage').innerHTML = cfg.allFilesRecived;
-
-            widthAnimate('multiuploadProgressBar', cfg.progressBarWidth);
 
             this.clearFileList();
         }
