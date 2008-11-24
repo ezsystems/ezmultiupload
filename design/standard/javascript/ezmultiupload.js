@@ -30,7 +30,6 @@ YAHOO.ez.MultiUpload = (function() {
         this.upload(fileID, cfg.uploadURL, 'POST', cfg.uploadVars);
 
         Dom.get('uploadButton').disabled = true;
-        Dom.setStyle('uploadButtonOverlay', 'visibility', 'hidden');
     };
 
     var onUploadStart = function(e) {
@@ -59,7 +58,6 @@ YAHOO.ez.MultiUpload = (function() {
 
             Dom.get('uploadButton').disabled = false;
             Dom.get('multiuploadProgressMessage').innerHTML = cfg.allFilesRecived;
-            Dom.setStyle('uploadButtonOverlay', 'visibility', 'visible');
 
             this.clearFileList();
         }
