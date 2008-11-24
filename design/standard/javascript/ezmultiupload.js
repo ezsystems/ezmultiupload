@@ -30,6 +30,7 @@ YAHOO.ez.MultiUpload = (function() {
         this.upload(fileID, cfg.uploadURL, 'POST', cfg.uploadVars);
 
         Dom.get('uploadButton').disabled = true;
+        Dom.setStyle('uploadButtonOverlay', 'visibility', 'hidden');
     };
 
     var onUploadStart = function(e) {
@@ -38,11 +39,9 @@ YAHOO.ez.MultiUpload = (function() {
     };
 
     var onUploadProgress = function(e, cfg) {
-        var progress = Math.round((100 * e['bytesLoaded']) / e['bytesTotal']),
-            currentWidth = Math.round((cfg.progressBarWidth * progress) / 100),
-            totalWidth = parseInt(currentWidth) + parseInt((Dom.getStyle('multiuploadProgressBar', 'width')).split('px')[0]);
+        var width = Math.floor((cfg.progressBarWidth * e['bytesLoaded']) / e['bytesTotal']);
 
-            widthAnimate('multiuploadProgressBar', totalWidth);
+        widthAnimate('multiuploadProgressBar', width);
     };
 
     var onUploadComplete = function(e, cfg) {
@@ -60,6 +59,7 @@ YAHOO.ez.MultiUpload = (function() {
 
             Dom.get('uploadButton').disabled = false;
             Dom.get('multiuploadProgressMessage').innerHTML = cfg.allFilesRecived;
+            Dom.setStyle('uploadButtonOverlay', 'visibility', 'visible');
 
             this.clearFileList();
         }
