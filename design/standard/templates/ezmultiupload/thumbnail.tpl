@@ -1,6 +1,6 @@
 {if $result.errors|count()|gt(0)}
     <div class="error-block">
-        <h2>{'Error'|i18n('extension/ezmultiupload')}" /></h2>
+        <h2>{'Error'|i18n('extension/ezmultiupload')}</h2>
         <ul>
         {foreach $result.errors as $error}
             <li>{$error.description}</li>
