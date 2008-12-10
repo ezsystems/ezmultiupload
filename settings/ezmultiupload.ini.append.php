@@ -9,11 +9,6 @@ AvailableSubtreeNode[]
 
 MultiuploadHandlers[]
 
-MultiuploadHandlerRepositories[]
-MultiuploadHandlerRepositories[]=extension/ezmultiupload/classes/multiuploadhandlers
-
-MultiuploadExtensions[]
-
 [FileTypeSettings_folder]
 FileType[]
 FileType[]=*.odt
