@@ -34,7 +34,10 @@ YAHOO.ez.MultiUpload = (function() {
         var cancelUploadButton = Dom.get('cancelUploadButton');
         Dom.setStyle(cancelUploadButton, 'visibility', 'visible');
         
-        Event.on(cancelUploadButton, 'click', cancelUpload, this, true );
+        Event.on(cancelUploadButton, 'click', cancelUpload, {
+            uploader: this,
+            cfg: cfg
+        }, true );
         
         this.disable();
     };
@@ -95,12 +98,14 @@ YAHOO.ez.MultiUpload = (function() {
     };
 
     var cancelUpload = function(){
-        this.cancel();
-        this.enable();
-        this.clearFileList();
+        this.uploader.cancel();
+        this.uploader.enable();
+        this.uploader.clearFileList();
         
-        this.uploadCounter = 0;
-        this.queue = [];
+        this.uploader.uploadCounter = 0;
+        this.uploader.queue = [];
+        
+        Dom.get('multiuploadProgressMessage').innerHTML = this.cfg.uploadCanceled;
         Dom.get('uploadButton').disabled = false;
     };
 
@@ -148,6 +153,7 @@ YAHOO.ez.MultiUpload = (function() {
                fileType: false,
                progressBarWidth: 300,
                allFilesRecived: false,
+               uploadCanceled: false,
                thumbnailCreated: false }
     }
 })();

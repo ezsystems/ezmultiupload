@@ -37,5 +37,13 @@
         <source>Multiupload</source>
         <translation>Multi-uppladdning</translation>
     </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Upload canceled.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

@@ -37,5 +37,13 @@
         <source>Starting...</source>
         <translation>Spouští se...</translation>
     </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Upload canceled.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

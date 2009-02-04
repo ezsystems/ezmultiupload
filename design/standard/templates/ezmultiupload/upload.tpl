@@ -46,6 +46,7 @@
                                    fileType: '{$file_types}',
                                    progressBarWidth: '300',
                                    allFilesRecived: '{'All files received.'|i18n('extension/ezmultiupload')}',
+                                   uploadCanceled: '{'Upload canceled.'|i18n('extension/ezmultiupload')}',
                                    thumbnailCreated: '{'Thumbnail created.'|i18n('extension/ezmultiupload')}'
                                 {rdelim};
 
