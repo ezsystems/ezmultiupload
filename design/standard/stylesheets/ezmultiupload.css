@@ -27,17 +27,6 @@
     text-align: center;
 }
 
-.content-view-ezmultiupload #uploadBtn {
-    padding: 5px;
-    font-size: 1.4em;
-    text-align: left;
-}
-
-.content-view-ezmultiupload #uploadBtn img {
-    margin-right: 5px;
-    vertical-align: bottom;
-}
-
 .content-view-ezmultiupload #multiuploadProgress {
     width: 320px;
     display: none;
@@ -68,4 +57,8 @@
     width: 0px;
     height: 8px;
     background-color: #fc8c00;
+}
+
+.content-view-ezmultiupload #cancelUploadButton {
+    visibility: hidden;
 }

@@ -13,7 +13,7 @@ YAHOO.ez.MultiUpload = (function() {
         this.setAllowMultipleFiles(true);
         this.setFileFilters(cfg.fileType);
     };
-    
+
     var onFileSelect = function(e, cfg) {
         Dom.setStyle('multiuploadProgress' , 'display', 'block');
         if( Dom.getStyle('multiuploadProgress' , 'opacity' ) == 0) {
@@ -28,11 +28,20 @@ YAHOO.ez.MultiUpload = (function() {
 
         var fileID = this.queue[this.uploadCounter]['id'];
         this.upload(fileID, cfg.uploadURL, 'POST', cfg.uploadVars);
-
+        
         Dom.get('uploadButton').disabled = true;
+        
+        var cancelUploadButton = Dom.get('cancelUploadButton');
+        Dom.setStyle(cancelUploadButton, 'visibility', 'visible');
+        
+        Event.on(cancelUploadButton, 'click', cancelUpload, this, true );
+        
+        this.disable();
     };
 
     var onUploadStart = function(e) {
+        Dom.setStyle('multiuploadProgressBar' , 'width', 0);
+        Dom.get('multiuploadProgressMessage').innerHTML = '';
         Dom.get('multiuploadProgressFile').innerHTML = (this.uploadCounter + 1) + '/' + this.queue.length;
         Dom.get('multiuploadProgressFileName').innerHTML = this.queue[this.uploadCounter]['name'];
     };
@@ -45,13 +54,13 @@ YAHOO.ez.MultiUpload = (function() {
 
     var onUploadComplete = function(e, cfg) {
         Dom.get('multiuploadProgressMessage').innerHTML = cfg.thumbnailCreated;
-
+        Dom.setStyle('multiuploadProgressBar' , 'width', '100%');
+        
         if (this.uploadCounter < this.queue.length - 1) {
             this.uploadCounter++;
 
             var fileID = this.queue[this.uploadCounter]['id'];
             this.upload(fileID, cfg.uploadURL, 'POST', cfg.uploadVars);
-            Dom.setStyle('multiuploadProgressBar' , 'width', 0);
         } else {
             this.uploadCounter = 0;
             this.queue = [];
@@ -59,6 +68,9 @@ YAHOO.ez.MultiUpload = (function() {
             Dom.get('uploadButton').disabled = false;
             Dom.get('multiuploadProgressMessage').innerHTML = cfg.allFilesRecived;
 
+            Dom.setStyle('cancelUploadButton', 'visibility', 'hidden');
+            
+            this.enable();
             this.clearFileList();
         }
     };
@@ -80,6 +92,16 @@ YAHOO.ez.MultiUpload = (function() {
 
     var onUploadError = function(e) {
         alert(event.status);
+    };
+
+    var cancelUpload = function(){
+        this.cancel();
+        this.enable();
+        this.clearFileList();
+        
+        this.uploadCounter = 0;
+        this.queue = [];
+        Dom.get('uploadButton').disabled = false;
     };
 
     var fadeAnimate = function(elementID, fromValue, toValue) {
