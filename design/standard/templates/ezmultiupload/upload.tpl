@@ -1,7 +1,6 @@
 <script type="text/javascript" src={"javascript/yui/2.6.0/build/utilities/utilities.js"|ezdesign}></script>
 <script type="text/javascript" src={"javascript/yui/2.6.0/build/json/json-min.js"|ezdesign}></script>
 <script type="text/javascript" src={"javascript/yui/2.6.0/build/uploader/uploader-experimental-min.js"|ezdesign}></script>
-<script type="text/javascript" src={"javascript/prototype/1.6.0.3/prototype.js"|ezdesign}></script>
 <script type="text/javascript" src={"javascript/ezmultiupload.js"|ezdesign}></script>
 
 <div class="border-box">

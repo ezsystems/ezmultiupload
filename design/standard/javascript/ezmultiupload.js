@@ -81,10 +81,7 @@ YAHOO.ez.MultiUpload = (function() {
     var onUploadCompleteData = function(e, cfg) {
         var response = JSON.parse(e.data);
         var id = response.id;
-        var data = response.data.unescapeHTML();
-
-        data = data.gsub( '&quot;', '"' );
-        data = data.gsub( '&#039;', "'" );
+        var data = unescapeHTML(response.data);
 
         var thumbnail = '<div id="thumbnail_' + id + '" class="thumbnail-block" style="opacity:0;" >' + data + '</div>';
         var thumbnails = Dom.get('thumbnails');
@@ -117,6 +114,16 @@ YAHOO.ez.MultiUpload = (function() {
     var widthAnimate = function(elementID, toValue) {
         var anim = new YAHOO.util.Anim(elementID , { width: { to: toValue } } , 0.5);
         anim.animate();
+    };
+
+    var stripTags = function(s) {
+        return s.replace(/<\/?[^>]+>/gi, '');
+    };
+    
+    var unescapeHTML = function(s) {
+        var div = document.createElement('div');
+        div.innerHTML = stripTags(s);
+        return div.childNodes[0] ? div.childNodes[0].nodeValue : '';
     };
 
     // Public
