@@ -38,9 +38,9 @@
                                    swfURL:'{'javascript/yui/2.6.0/build/uploader/assets/uploader.swf'|ezdesign( 'no' )}',
                                    uploadURL: '{concat( 'ezmultiupload/upload/', $parent_node. node_id )|ezurl( 'no' )}',
                                    uploadVars: {ldelim} 
-                                                   '{ezini( 'Session', 'SessionNamePrefix', 'site.ini' )}': '{$session_id}',
-                                                   '{ezini( 'Session', 'SessionNamePrefix', 'site.ini' )}{$siteaccess.name}': '{$session_id}',
-                                                   UploadButton: 'Upload'
+                                                   '{$session_name}': '{$session_id}',
+                                                   'UserSessionHash': '{$user_session_hash}',
+                                                   'UploadButton': 'Upload'
                                                {rdelim},
                                    fileType: '{$file_types}',
                                    progressBarWidth: '300',

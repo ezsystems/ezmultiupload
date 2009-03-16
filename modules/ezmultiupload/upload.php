@@ -98,9 +98,10 @@ else
 
     // Pass variables to upload.tpl template
     $tpl->setVariable( 'file_types', $availableFileTypesStr );
-    $tpl->setVariable( 'session_id', $http->getSessionKey() );
+    $tpl->setVariable( 'session_id', session_id() );
+    $tpl->setVariable( 'session_name', session_name() );
+    $tpl->setVariable( 'user_session_hash', eZSession::getUserSessionHash() );
     $tpl->setVariable( 'parent_node', $parentNode );
-    $tpl->setVariable( 'siteaccess', $GLOBALS['eZCurrentAccess'] );
 
     // Process template and set path data
     $Result = array();
