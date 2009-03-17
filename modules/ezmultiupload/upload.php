@@ -2,9 +2,9 @@
 /**
  * File containing the eZ Publish upload view implementation.
  *
- * @copyright Copyright (C) 2005-2008 eZ Systems AS. All rights reserved.
+ * @copyright Copyright (C) 2005-2009 eZ Systems AS. All rights reserved.
  * @license http://ez.no/licenses/gnu_gpl GNU GPL v2
- * @version //autogentag//
+ * @version 1.0.0
  * @package ezmultiupload
  */
 
