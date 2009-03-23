@@ -42,7 +42,7 @@ if( $module->isCurrentAction( 'Upload' ) )
     // Strip all new lines from processed template and convert all applicable characters to 
     // HTML entities output. Create upload ID
     $httpCharset = eZTextCodec::httpCharset();
-    $data = htmlentities( str_replace( array( "\n", "\r\n" ), array(""), $templateOutput ) , ENT_QUOTES, $httpCharset );
+    $data = htmlentities( str_replace( array( "\r\n", "\r", "\n" ), array(""), $templateOutput ) , ENT_QUOTES, $httpCharset );
     $id = md5( (string)mt_rand() . (string)microtime() );
  
     $response = array( 'data' => $data, 'id' => $id );
