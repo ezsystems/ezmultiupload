@@ -46,4 +46,11 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
+<context>
+    <name>design/admin/popupmenu</name>
+    <message>
+        <source>Upload multiple files</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>
