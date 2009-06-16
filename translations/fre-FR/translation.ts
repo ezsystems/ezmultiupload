@@ -35,15 +35,22 @@
     </message>
     <message>
         <source>Starting...</source>
-        <translation>Début...</translation>
+        <translation>Démarrage...</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <source>Upload canceled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Upload annulé.</translation>
+    </message>
+</context>
+<context>
+    <name>design/admin/popupmenu</name>
+    <message>
+        <source>Upload multiple files</source>
+        <translation>Déposer plusieurs fichiers</translation>
     </message>
 </context>
 </TS>
