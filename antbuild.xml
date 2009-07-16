@@ -45,4 +45,12 @@
 
         <echo message="Build completed!" />
     </target>
+
+    <target name="dist-clean">
+        <delete dir="${distdir}"/>
+    </target>
+
+    <target name="clean-all" depends="dist-clean">
+        <delete dir="build"/>
+    </target>
 </project>
