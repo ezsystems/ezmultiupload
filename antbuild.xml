@@ -37,11 +37,10 @@
     <target name="dist" depends="build">
         <echo message="Creating archive '${distname}.tar.gz' ..." />
 
-        <tar destfile="${distdir}/${distname}.tar.gz" compression="gzip">
-            <fileset dir="${buildrootdir}">
-                <include name="*" />
-            </fileset>
-        </tar>
+        <tar destfile="${distdir}/${distname}.tar.gz"
+             compression="gzip"
+             longfile="gnu"
+             basedir="${buildrootdir}"/>
 
         <echo message="Build completed!" />
     </target>
