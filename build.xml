@@ -46,7 +46,7 @@
     </target>
 
     <target name="dist">
-        <tar destfile="ezmultiupload-${ezmultiupload.version.alias}.tar.gz"
+        <tar destfile="ezmultiupload-${ezmultiupload.version.alias}.${ezmultiupload.version.release}.tar.gz"
              compression="gzip"
              longfile="gnu"
              basedir="ezmultiupload"/>
