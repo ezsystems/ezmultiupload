@@ -34,6 +34,8 @@
 
     <target name="build" depends="init">
 
+        <delete file="ezmultiupload/build.xml"/>
+
         <echo message="Updating ezinfo.php"/>
 
         <replaceregexp byline="true">
