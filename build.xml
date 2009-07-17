@@ -1,55 +1,64 @@
 <?xml version="1.0"?>
 
-<project name="ezmultiupload" default="dist" basedir=".">
-    <property name="builddirname" value="build"/>
-    <property name="buildrootdir" value="${basedir}/${builddirname}"/>
-    <property name="builddir"     value="${buildrootdir}/${ant.project.name}"/>
-    <property name="distdirname"  value="dist"/>
-    <property name="distdir"      value="${basedir}/${distdirname}"/>
-    <property name="version"      value="1.0.0"/>
-    <property name="distname"     value="${ant.project.name}-${version}"/>
+<project name="eZMultiUpload" default="build" basedir="build">
 
-    <target name="prepare">
-        <echo message="Preparing directory ${builddir} ..." />
-        <delete dir="${builddir}" />
-        <mkdir dir="${builddir}" />
-        <echo message="Preparing directory ${distdir} ..." />
-        <delete dir="${distdir}" />
-        <mkdir dir="${distdir}" />
+    <description>eZSI extension build file</description>
+
+    <property file="../properties/ezmultiupload.properties"/>
+
+    <target name="infos">
+        <echo message="EZMULTIUPLOAD BUILD INFORMATIONS"/>
+        <echo message="--------------------------------"/>
+        <echo message="ezmultiupload.version.major   : ${ezmultiupload.version.major}"/>
+        <echo message="ezmultiupload.version.minor   : ${ezmultiupload.version.minor}"/>
+        <echo message="ezmultiupload.version.release : ${ezmultiupload.version.release}"/>
+        <echo message="ezmultiupload.version.alias   : ${ezmultiupload.version.alias}"/>
+        <echo message="ezmultiupload.svn.trunk.url   : ${ezmultiupload.svn.trunk.url}"/>
     </target>
 
-    <!-- Fileset for all files -->
-    <fileset dir="." id="allfiles">
-        <include name="**" />
-        <exclude name="build.xml" />
-        <exclude name="${builddirname}/**" />
-        <exclude name="${distdirname}" />
-        <exclude name="dist.sh" />
-    </fileset>
+    <target name="warning" depends="infos">
+        <echo message="Please check informations defined above are correct"/>
+        <echo message="If not feel free to update the properties/ezmultiupload.properties file"/>
+        <echo message="This script will wait for 5 seconds before it starts"/>
 
-    <target name="build" depends="prepare">
-        <echo message="Copying files to build directory..." />
-        <copy todir="${builddir}">
-            <fileset refid="allfiles" />
-        </copy>
+        <sleep seconds="5"/>
     </target>
 
-    <target name="dist" depends="build">
-        <echo message="Creating archive '${distname}.tar.gz' ..." />
+    <target name="init" depends="warning">
+        <exec executable="svn" failonerror="true">
+            <arg value="export"/>
+            <arg value="${ezmultiupload.svn.trunk.url}"/>
+            <arg value="ezmultiupload"/>
+        </exec>
+    </target>
 
-        <tar destfile="${distdir}/${distname}.tar.gz"
+    <target name="build" depends="init">
+
+        <echo message="Updating ezinfo.php"/>
+
+        <replaceregexp byline="true">
+            <regexp pattern='^(                      \047Version\047 => \047)(.*)(\047,)$'/>
+            <substitution expression='\1${ezmultiupload.version.alias}\3'/>
+            <fileset file="ezmultiupload/ezinfo.php"/>
+        </replaceregexp>
+
+        <delete dir="ezmultiupload/build"/>
+    </target>
+
+    <target name="dist">
+        <tar destfile="ezmultiupload-${ezmultiupload.version.alias}.tar.gz"
              compression="gzip"
              longfile="gnu"
-             basedir="${buildrootdir}"/>
+             basedir="ezmultiupload"/>
 
-        <echo message="Build completed!" />
     </target>
 
-    <target name="dist-clean">
-        <delete dir="${distdir}"/>
+    <target name="distclean">
+        <delete file="ezmultiupload-${ezmultiupload.version.alias}.tar.gz"/>
     </target>
 
-    <target name="clean-all" depends="dist-clean">
-        <delete dir="build"/>
+    <target name="cleanall" depends="distclean">
+        <delete dir="ezmultiupload"/>
     </target>
+
 </project>
