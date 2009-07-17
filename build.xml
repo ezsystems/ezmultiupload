@@ -56,7 +56,7 @@
     </target>
 
     <target name="distclean">
-        <delete file="ezmultiupload-${ezmultiupload.version.alias}.tar.gz"/>
+        <delete file="ezmultiupload-${ezmultiupload.version.alias}.${ezmultiupload.version.release}.tar.gz"/>
     </target>
 
     <target name="cleanall" depends="distclean">
