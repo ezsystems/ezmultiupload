@@ -51,8 +51,7 @@
         <tar destfile="ezmultiupload-${ezmultiupload.version.alias}.${ezmultiupload.version.release}.tar.gz"
              compression="gzip"
              longfile="gnu"
-             basedir="ezmultiupload"/>
-
+             basedir="${basedir}"/>
     </target>
 
     <target name="distclean">
