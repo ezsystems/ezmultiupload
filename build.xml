@@ -2,7 +2,7 @@
 
 <project name="eZMultiUpload" default="build" basedir="build">
 
-    <description>eZSI extension build file</description>
+    <description>eZMultiUpload extension build file</description>
 
     <property file="../properties/ezmultiupload.properties"/>
 
