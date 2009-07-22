@@ -33,9 +33,9 @@
     <!-- high level ( public ) targets -->
     <!-- ============================= -->
 
-    <!-- Shows the list of properties used for building this extension -->
+    <!-- Shows the list of properties used for building this extension          -->
     <!-- Anytime the ezmultiupload.properties file is update, this target must  -->
-    <!-- me update as well                                             -->
+    <!-- be updated as well                                                     -->
     <target name="infos">
         <echo message="EZMULTIUPLOAD BUILD INFORMATION"/>
         <echo message="-------------------------------"/>
