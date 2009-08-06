@@ -1,9 +1,18 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="de_DE" sourcelanguage="en">
+<context>
+    <name>design/admin/popupmenu</name>
+    <message>
+        <source>Upload multiple files</source>
+        <translation>Multi Upload</translation>
+    </message>
+</context>
 <context>
     <name>extension/ezmultiupload</name>
     <message>
         <source>Multiupload</source>
-        <translation>Multi-Upload</translation>
+        <translation>Multi Upload</translation>
     </message>
     <message>
         <source>Error</source>
@@ -19,15 +28,15 @@
     </message>
     <message>
         <source>Unable to load Flash content. You can download the latest version of Flash Player from the</source>
-        <translation>Flash-Content konnte nicht geladen werden. Sie können die neueste Flash-Player-Version downloaden über</translation>
+        <translation type="obsolete">Flash-Content konnte nicht geladen werden. Sie können die neueste Flash-Player-Version downloaden über</translation>
     </message>
     <message>
         <source>Adobe Flash Player Download Center</source>
-        <translation>Adobe Flash Player Download Center</translation>
+        <translation type="obsolete">Adobe Flash Player Download Center</translation>
     </message>
     <message>
         <source>All files received.</source>
-        <translation>Alle Dateien erhalten.</translation>
+        <translation>Alle Dateien empfangen.</translation>
     </message>
     <message>
         <source>Thumbnail created.</source>
@@ -35,22 +44,15 @@
     </message>
     <message>
         <source>Starting...</source>
-        <translation>Starte ...</translation>
+        <translation type="obsolete">Starte ...</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Abbrechen</translation>
     </message>
     <message>
         <source>Upload canceled.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>design/admin/popupmenu</name>
-    <message>
-        <source>Upload multiple files</source>
-        <translation type="unfinished"></translation>
+        <translation>Der Upload wurde abgebrochen.</translation>
     </message>
 </context>
 </TS>
