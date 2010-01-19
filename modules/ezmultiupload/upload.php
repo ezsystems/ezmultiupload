@@ -48,7 +48,7 @@ if( $module->isCurrentAction( 'Upload' ) )
     $response = array( 'data' => $data, 'id' => $id );
 
     // Return server response in JSON format
-    echo eZAjaxContent::jsonEncode( $response );
+    echo json_encode( $response );
 
     // Stop execution
     eZExecution::cleanExit();
