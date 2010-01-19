@@ -44,9 +44,9 @@
                                                {rdelim},
                                    fileType: '{$file_types}',
                                    progressBarWidth: '300',
-                                   allFilesRecived: '{'All files received.'|i18n('extension/ezmultiupload')}',
-                                   uploadCanceled: '{'Upload canceled.'|i18n('extension/ezmultiupload')}',
-                                   thumbnailCreated: '{'Thumbnail created.'|i18n('extension/ezmultiupload')}'
+                                   allFilesRecived: '{'All files received.'|i18n('extension/ezmultiupload')|wash(javascript)}',
+                                   uploadCanceled: '{'Upload canceled.'|i18n('extension/ezmultiupload')|wash(javascript)}',
+                                   thumbnailCreated: '{'Thumbnail created.'|i18n('extension/ezmultiupload')|wash(javascript)}'
                                 {rdelim};
 
     YAHOO.ez.MultiUpload.init();
