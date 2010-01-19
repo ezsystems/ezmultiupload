@@ -67,16 +67,16 @@ class eZAjaxContent
     public static function getHttpAccept( $default = 'xhtml', $aliasList = array( 'html' => 'xhtml', 'json' => 'json', 'javascript' => 'json', 'xml' => 'xml', 'text' => 'text' ) )
     {
         if ( isset($_POST['http_accept']) )
-            $acceptList = split( ',', $_POST['http_accept'] );
+            $acceptList = explode( ',', $_POST['http_accept'] );
         else if ( isset($_POST['HTTP_ACCEPT']) )
-            $acceptList = split( ',', $_POST['HTTP_ACCEPT'] );
+            $acceptList = explode( ',', $_POST['HTTP_ACCEPT'] );
         else if ( isset($_GET['http_accept']) )
-            $acceptList = split( ',', $_GET['http_accept'] );
+            $acceptList = explode( ',', $_GET['http_accept'] );
         else if ( isset($_GET['HTTP_ACCEPT']) )
-            $acceptList = split( ',', $_GET['HTTP_ACCEPT'] );
+            $acceptList = explode( ',', $_GET['HTTP_ACCEPT'] );
 
         if ( !isset( $acceptList ) )
-            $acceptList = split( ',', $_SERVER['HTTP_ACCEPT'] );
+            $acceptList = explode( ',', $_SERVER['HTTP_ACCEPT'] );
 
         foreach( $acceptList as $accept )
         {
