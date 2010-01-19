@@ -43,7 +43,7 @@
                                                    'UserSessionHash': '{$user_session_hash}',
                                                    'UploadButton': 'Upload'
                                                {rdelim},
-                                   fileType: '{$file_types}',
+                                   fileType: [{ldelim} description:"{'Allowed Files'|i18n('extension/ezmultiupload')|wash(javascript)}", extensions:'{$file_types}' {rdelim}],
                                    progressBarWidth: '300',
                                    allFilesRecived: '{'All files received.'|i18n('extension/ezmultiupload')|wash(javascript)}',
                                    uploadCanceled: '{'Upload canceled.'|i18n('extension/ezmultiupload')|wash(javascript)}',
