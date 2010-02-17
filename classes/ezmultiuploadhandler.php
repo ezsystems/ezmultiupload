@@ -32,7 +32,7 @@ class eZMultiuploadHandler
 
         foreach ( $handlers as $hanlder )
         {
-            if ( !call_user_func( array( $hanlder, $method ), &$result ) )
+            if ( !call_user_func( array( $hanlder, $method ), $result ) )
                 eZDebug::writeWarning( 'Multiupload handler implementation not found' );
         }
 
