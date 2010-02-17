@@ -1,6 +1,6 @@
-<script type="text/javascript" src={"javascript/yui/2.7.0/build/utilities/utilities.js"|ezdesign}></script>
-<script type="text/javascript" src={"javascript/yui/2.7.0/build/json/json-min.js"|ezdesign}></script>
-<script type="text/javascript" src={"javascript/yui/2.7.0/build/uploader/uploader-min.js"|ezdesign}></script>
+<script type="text/javascript" src={"javascript/yui/2.8.0r4/build/utilities/utilities.js"|ezdesign}></script>
+<script type="text/javascript" src={"javascript/yui/2.8.0r4/build/json/json-min.js"|ezdesign}></script>
+<script type="text/javascript" src={"javascript/yui/2.8.0r4/build/uploader/uploader-min.js"|ezdesign}></script>
 <script type="text/javascript" src={"javascript/ezmultiupload.js"|ezdesign}></script>
 
 <div class="content-navigation">
@@ -36,7 +36,7 @@
 
 <script type="text/javascript">
     YAHOO.ez.MultiUpload.cfg = {ldelim}
-                                   swfURL:'{'javascript/yui/2.7.0/build/uploader/assets/uploader.swf'|ezdesign( 'no' )}',
+                                   swfURL:'{'javascript/yui/2.8.0r4/build/uploader/assets/uploader.swf'|ezdesign( 'no' )}',
                                    uploadURL: '{concat( 'ezmultiupload/upload/', $parent_node. node_id )|ezurl( 'no' )}',
                                    uploadVars: {ldelim}
                                                    '{$session_name}': '{$session_id}',
