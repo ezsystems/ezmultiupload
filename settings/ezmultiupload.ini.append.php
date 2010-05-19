@@ -21,5 +21,6 @@ FileType[]
 FileType[]=*.jpg
 FileType[]=*.png
 FileType[]=*.gif
+FileType[]=*.flv
 
 */ ?>
