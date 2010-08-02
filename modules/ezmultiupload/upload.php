@@ -101,7 +101,12 @@ else
     $tpl->setVariable( 'file_types', $availableFileTypesStr );
     $tpl->setVariable( 'session_id', session_id() );
     $tpl->setVariable( 'session_name', session_name() );
-    $tpl->setVariable( 'user_session_hash', eZSession::getUserSessionHash() );
+
+    if ( class_exists( 'eZSession', false ) )
+        $tpl->setVariable( 'user_session_hash', eZSession::getUserSessionHash() );
+    else
+        $tpl->setVariable( 'user_session_hash', 'a2e4822a98337283e39f7b60acf85ec9' );
+
     $tpl->setVariable( 'parent_node', $parentNode );
 
     // Process template and set path data
