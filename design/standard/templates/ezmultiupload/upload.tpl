@@ -1,7 +1,43 @@
-<script type="text/javascript" src={"javascript/yui/2.8.0r4/build/utilities/utilities.js"|ezdesign}></script>
-<script type="text/javascript" src={"javascript/yui/2.8.0r4/build/json/json-min.js"|ezdesign}></script>
-<script type="text/javascript" src={"javascript/yui/2.8.0r4/build/uploader/uploader-min.js"|ezdesign}></script>
-<script type="text/javascript" src={"javascript/ezmultiupload.js"|ezdesign}></script>
+{ezscript_require( 'ezjsc::yui2' )}
+{ezcss_require( 'ezmultiupload.css' )}
+<script type="text/javascript">
+(function(){ldelim}
+    YUILoader.addModule({ldelim}
+        name: 'ezmultiupload',
+        type: 'js',
+        fullpath: '{"javascript/ezmultiupload.js"|ezdesign( 'no' )}',
+        requires: ["utilities", "json", "uploader"],
+        after: ["uploader"],
+        skinnable: false
+    {rdelim});
+
+    // Load the files using the insert() method and set it up and init it on success.
+    YUILoader.insert({ldelim}
+        require: ["ezmultiupload"],
+        onSuccess: function()
+        {ldelim}
+            YAHOO.ez.MultiUpload.cfg = {ldelim}
+                swfURL:"{concat( ezini('eZJSCore', 'LocalScriptBasePath', 'ezjscore.ini').yui2, 'uploader/assets/uploader.swf' )|ezdesign( 'no' )}",
+                uploadURL: "{concat( 'ezmultiupload/upload/', $parent_node. node_id )|ezurl( 'no' )}",
+                uploadVars: {ldelim}
+                                '{$session_name}': '{$session_id}',
+                                'UserSessionHash': '{$user_session_hash}',
+                                'UploadButton': 'Upload'
+                            {rdelim},
+                // Filter is passed on to uploader.setFileFilter() in ez.MultiUpload
+                fileType: [{ldelim} description:"{'Allowed Files'|i18n('extension/ezmultiupload')|wash('javascript')}", extensions:'{$file_types}' {rdelim}],
+                progressBarWidth: "300",
+                allFilesRecived:  "{'All files received.'|i18n('extension/ezmultiupload')|wash(javascript)}",
+                uploadCanceled:   "{'Upload canceled.'|i18n('extension/ezmultiupload')|wash(javascript)}",
+                thumbnailCreated: "{'Thumbnail created.'|i18n('extension/ezmultiupload')|wash(javascript)}"
+            {rdelim};
+            YAHOO.ez.MultiUpload.init();
+        {rdelim},
+        timeout: 10000,
+        combine: true
+    {rdelim}, "js");
+{rdelim})();
+</script>
 
 <div class="border-box">
 <div class="border-tl"><div class="border-tr"><div class="border-tc"></div></div></div>
@@ -32,23 +68,4 @@
 </div></div></div>
 <div class="border-bl"><div class="border-br"><div class="border-bc"></div></div></div>
 </div>
-
-<script type="text/javascript">
-    YAHOO.ez.MultiUpload.cfg = {ldelim}
-                                   swfURL:'{'javascript/yui/2.8.0r4/build/uploader/assets/uploader.swf'|ezdesign( 'no' )}',
-                                   uploadURL: '{concat( 'ezmultiupload/upload/', $parent_node. node_id )|ezurl( 'no' )}',
-                                   uploadVars: {ldelim} 
-                                                   '{$session_name}': '{$session_id}',
-                                                   'UserSessionHash': '{$user_session_hash}',
-                                                   'UploadButton': 'Upload'
-                                               {rdelim},
-                                   fileType: [{ldelim} description:"{'Allowed Files'|i18n('extension/ezmultiupload')|wash(javascript)}", extensions:'{$file_types}' {rdelim}],
-                                   progressBarWidth: '300',
-                                   allFilesRecived: '{'All files received.'|i18n('extension/ezmultiupload')|wash(javascript)}',
-                                   uploadCanceled: '{'Upload canceled.'|i18n('extension/ezmultiupload')|wash(javascript)}',
-                                   thumbnailCreated: '{'Thumbnail created.'|i18n('extension/ezmultiupload')|wash(javascript)}'
-                                {rdelim};
-
-    YAHOO.ez.MultiUpload.init();
-</script>
 
