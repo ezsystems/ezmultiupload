@@ -11,11 +11,9 @@ YAHOO.ez.MultiUpload = (function()
 
     var onContentReady = function(o)
     {
-        if ( !YAHOO.ez.MultiUpload.cfg.fileType.extensions )
-            return;
-
         this.setAllowMultipleFiles(true);
-        this.setFileFilters(YAHOO.ez.MultiUpload.cfg.fileType);
+        if ( YAHOO.ez.MultiUpload.cfg.fileType[0].extensions )
+            this.setFileFilters(YAHOO.ez.MultiUpload.cfg.fileType);
     };
 
     var onFileSelect = function(e)
@@ -174,8 +172,8 @@ YAHOO.ez.MultiUpload = (function()
                uploadVars: false,
                fileType: false,
                progressBarWidth: 300,
-               allFilesRecived: false,
-               uploadCanceled: false,
-               thumbnailCreated: false }
+               allFilesRecived: '',
+               uploadCanceled: '',
+               thumbnailCreated: '' }
     }
 })();

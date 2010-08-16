@@ -18,7 +18,7 @@
         {ldelim}
             YAHOO.ez.MultiUpload.cfg = {ldelim}
                 swfURL:"{concat( ezini('eZJSCore', 'LocalScriptBasePath', 'ezjscore.ini').yui2, 'uploader/assets/uploader.swf' )|ezdesign( 'no' )}",
-                uploadURL: "{concat( 'ezmultiupload/upload/', $parent_node. node_id )|ezurl( 'no' )}",
+                uploadURL: "{concat( 'ezmultiupload/upload/', $parent_node.node_id )|ezurl( 'no' )}",
                 uploadVars: {ldelim}
                                 '{$session_name}': '{$session_id}',
                                 'UserSessionHash': '{$user_session_hash}',
