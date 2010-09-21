@@ -33,9 +33,7 @@
                 thumbnailCreated: "{'Thumbnail created.'|i18n('extension/ezmultiupload')|wash(javascript)}"
             {rdelim};
             YAHOO.ez.MultiUpload.init();
-        {rdelim},
-        timeout: 10000,
-        combine: true
+        {rdelim}
     {rdelim}, "js");
 {rdelim})();
 </script>
