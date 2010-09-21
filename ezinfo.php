@@ -15,11 +15,7 @@ class ezmultiuploadInfo
         return array( 'Name' => 'eZ Multiupload',
                       'Version' => '1.2.0',
                       'Copyright' => 'Copyright (C) 1999-2010 eZ Systems AS',
-                      'License' => 'GNU General Public License v2.0',
-                      'Includes the following third-party software' => array( 'Name' => 'YUI',
-                                                                              'Version' => '2.7.0',
-                                                                              'Copyright' => 'Copyright (c) ' . date( 'Y' ) . ', Yahoo! Inc. All rights reserved.',
-                                                                              'License' => 'BSD license' ) );
+                      'License' => 'GNU General Public License v2.0' );
     }
 }
 ?>
