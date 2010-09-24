@@ -6,17 +6,6 @@
         <copyright>Copyright (C) 1999-2010 eZ Systems AS</copyright>
         <license>GNU General Public License v2.0</license>
         <info_url>http://projects.ez.no/ezmultiupload</info_url>
-
-        <software>
-            <uses>
-                <name>YUI</name>
-                <license>BSD license</license>
-                <copyright>Copyright (c) 2009, Yahoo! Inc. All rights reserved.</copyright>
-                <info_url>http://developer.yahoo.com/yui/</info_url>
-                <version>2.8.0r4</version>
-            </uses>
-        </software>
-
     </metadata>
 
     <dependencies>
