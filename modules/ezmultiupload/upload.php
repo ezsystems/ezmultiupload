@@ -8,10 +8,8 @@
  * @package ezmultiupload
  */
 
-include_once( 'kernel/common/template.php' );
-
 $http = eZHTTPTool::instance();
-$tpl = templateInit();
+$tpl = eZTemplate::factory();
 $module = $Params['Module'];
 $parentNodeID = $Params['ParentNodeID'];
 
@@ -39,12 +37,12 @@ if( $module->isCurrentAction( 'Upload' ) )
     $tpl->setVariable( 'result', $result );
     $templateOutput = $tpl->fetch( 'design:ezmultiupload/thumbnail.tpl' );
 
-    // Strip all new lines from processed template and convert all applicable characters to 
+    // Strip all new lines from processed template and convert all applicable characters to
     // HTML entities output. Create upload ID
     $httpCharset = eZTextCodec::httpCharset();
     $data = htmlentities( str_replace( array( "\r\n", "\r", "\n" ), array(""), $templateOutput ) , ENT_QUOTES, $httpCharset );
     $id = md5( (string)mt_rand() . (string)microtime() );
- 
+
     $response = array( 'data' => $data, 'id' => $id );
 
     // Return server response in JSON format
@@ -61,7 +59,7 @@ else
 
     // Fetch parent node
     $parentNode = eZContentObjectTreeNode::fetch( $parentNodeID );
-    
+
     // Check if parent node object exists
     if( !$parentNode )
         return $module->handleError( eZError::KERNEL_NOT_FOUND, 'kernel' );
@@ -108,7 +106,7 @@ else
     $Result = array();
     $Result['content'] = $tpl->fetch( 'design:ezmultiupload/upload.tpl' );
     $Result['path'] = array( array( 'url' => false,
-                                    'text' => ezi18n( 'extension/ezmultiupload', 'Multiupload' ) ) );
+                                    'text' => ezpI18n::tr( 'extension/ezmultiupload', 'Multiupload' ) ) );
 }
 
 ?>
