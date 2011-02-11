@@ -30,10 +30,13 @@
                 progressBarWidth: "300",
                 allFilesRecived:  "{'All files received.'|i18n('extension/ezmultiupload')|wash(javascript)}",
                 uploadCanceled:   "{'Upload canceled.'|i18n('extension/ezmultiupload')|wash(javascript)}",
-                thumbnailCreated: "{'Thumbnail created.'|i18n('extension/ezmultiupload')|wash(javascript)}"
+                thumbnailCreated: "{'Thumbnail created.'|i18n('extension/ezmultiupload')|wash(javascript)}",
+                flashError: "{'Could not load flash(or not loaded yet), this is needed for multiupload!'|i18n('extension/ezmultiupload')}"
             {rdelim};
             YAHOO.ez.MultiUpload.init();
-        {rdelim}
+        {rdelim},
+        timeout: 10000,
+        combine: true
     {rdelim}, "js");
 {rdelim})();
 </script>
@@ -53,6 +56,7 @@
             <div id="uploadButtonOverlay" style="position: absolute; z-index: 2"></div>
             <button id="uploadButton" type="button" style="z-index: 1">{'Select files'|i18n('extension/ezmultiupload')}</button>
             <button id="cancelUploadButton" type="button">{'Cancel'|i18n('extension/ezmultiupload')}</button>
+            <p><noscript><em style="color: red;">{'Javascript has been disabled, this is needed for multiupload!'|i18n('extension/ezmultiupload')}</em></noscript></p>
         </div>
         <div id="multiuploadProgress">
             <p><span id="multiuploadProgressFile">&nbsp;</span>&nbsp;

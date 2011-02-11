@@ -14,6 +14,16 @@ YAHOO.ez.MultiUpload = (function()
         this.setAllowMultipleFiles(true);
         if ( YAHOO.ez.MultiUpload.cfg.fileType[0].extensions )
             this.setFileFilters(YAHOO.ez.MultiUpload.cfg.fileType);
+
+        Event.removeListener( Dom.get('uploadButtonOverlay'), 'click', missingFlashClick );
+    };
+
+    var missingFlashClick = function(o)
+    {
+        if ( YAHOO.ez.MultiUpload.cfg.flashError )
+            alert( YAHOO.ez.MultiUpload.cfg.flashError );
+        else
+            alert( "Could not load flash(or not yet loaded), this is needed for multiupload!" );
     };
 
     var onFileSelect = function(e)
@@ -147,6 +157,8 @@ YAHOO.ez.MultiUpload = (function()
             {
                 var uploadButton = Dom.getRegion('uploadButton');
                 var overlay = Dom.get('uploadButtonOverlay');
+
+                Event.addListener( overlay, 'click', missingFlashClick );
 
                 Dom.setStyle(overlay, 'width', uploadButton.right - uploadButton.left + "px");
                 Dom.setStyle(overlay, 'height', uploadButton.bottom - uploadButton.top + "px");
