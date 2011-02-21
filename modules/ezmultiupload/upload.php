@@ -22,7 +22,7 @@ if( $module->isCurrentAction( 'Upload' ) )
     eZMultiuploadHandler::exec( 'preUpload', $result );
 
     // Handle file upload only if there was no errors
-    if( count( $result['errors'] ) == 0 )
+    if( empty( $result['errors'] ) )
     {
         // Handle file upload. All checkes are performed by eZContentUpload::handleUpload()
         // and available in $result array
@@ -92,7 +92,7 @@ else
         $availableFileTypes = array_merge( $availableFileTypes, $uploadINI->variable( 'FileTypeSettings_' . $parentNodeClassIdentifier, 'FileType' ) );
 
     // Create string with available file types for GUI uploader
-    if ( count( $availableFileTypes ) > 0 )
+    if ( !empty( $availableFileTypes ) )
         $availableFileTypesStr = implode( ';', $availableFileTypes );
 
     // Pass variables to upload.tpl template
