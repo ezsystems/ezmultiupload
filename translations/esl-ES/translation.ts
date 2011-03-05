@@ -1,4 +1,13 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="es_ES">
+<context>
+    <name>design/admin/popupmenu</name>
+    <message>
+        <source>Upload multiple files</source>
+        <translation>Subir varios archivos</translation>
+    </message>
+</context>
 <context>
     <name>extension/ezmultiupload</name>
     <message>
@@ -19,11 +28,11 @@
     </message>
     <message>
         <source>Unable to load Flash content. You can download the latest version of Flash Player from the</source>
-        <translation>No se puede cargar el contenido Flash. Descargue la última versiónde Flash Player desde</translation>
+        <translation type="obsolete">No se puede cargar el contenido Flash. Descargue la última versiónde Flash Player desde</translation>
     </message>
     <message>
         <source>Adobe Flash Player Download Center</source>
-        <translation>Centro de descargas de Adobe Flash Player</translation>
+        <translation type="obsolete">Centro de descargas de Adobe Flash Player</translation>
     </message>
     <message>
         <source>All files received.</source>
@@ -35,22 +44,27 @@
     </message>
     <message>
         <source>Starting...</source>
-        <translation>Iniciando...</translation>
+        <translation type="obsolete">Iniciando...</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <source>Upload canceled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Subida cancelada.</translation>
     </message>
-</context>
-<context>
-    <name>design/admin/popupmenu</name>
     <message>
-        <source>Upload multiple files</source>
-        <translation type="unfinished"></translation>
+        <source>Allowed Files</source>
+        <translation>Ficheros permitidos</translation>
+    </message>
+    <message>
+        <source>Could not load flash(or not loaded yet), this is needed for multiupload!</source>
+        <translation>No se pudo cargar flash (o no se ha cargado todavía). ¡Esto es necesario para el multiupload!</translation>
+    </message>
+    <message>
+        <source>Javascript has been disabled, this is needed for multiupload!</source>
+        <translation>Javascript está deshabilitado. ¡Es necesario para el multiupload!</translation>
     </message>
 </context>
 </TS>
