@@ -1,56 +1,58 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="ja_JP">
 <context>
-    <name>ezmultiupload</name>
+    <name>design/admin/popupmenu</name>
     <message>
-        <source>Multiupload</source>
-        <translation>Multiupload</translation>
+        <source>Upload multiple files</source>
+        <translation>複数ファイルのアップロード</translation>
+    </message>
+</context>
+<context>
+    <name>extension/ezmultiupload</name>
+    <message>
+        <source>Allowed Files</source>
+        <translation>利用できるファイル</translation>
     </message>
     <message>
-        <source>The files are uploaded to</source>
-        <translation>ファイルのアップロード先：</translation>
+        <source>All files received.</source>
+        <translation>すべてのファイルを受信できました。</translation>
     </message>
     <message>
-        <source>Select files</source>
-        <translation>ファイルを選択してください。</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>エラー</translation>
+        <source>Upload canceled.</source>
+        <translation>アップロードは中止されました。</translation>
     </message>
     <message>
         <source>Thumbnail created.</source>
         <translation>サムネイルを作成しました。</translation>
     </message>
     <message>
-        <source>Starting...</source>
-        <translation>Starting...</translation>
+        <source>Multiupload</source>
+        <translation>マルチアップロード</translation>
     </message>
     <message>
-        <source>All files received.</source>
-        <translation>すべてのファイルが送信されました。</translation>
+        <source>The files are uploaded to</source>
+        <translation>ファイルのアップロード先</translation>
     </message>
     <message>
-        <source>Unable to load Flash content. You can download the latest version of Flash Player from the</source>
-        <translation>Unable to load Flash content. You can download the latest version of Flash Player from the</translation>
-    </message>
-    <message>
-        <source>Adobe Flash Player Download Center</source>
-        <translation>Adobe Flash Player Download Center</translation>
+        <source>Select files</source>
+        <translation>ファイルを選択してください</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
-        <source>Upload canceled.</source>
-        <translation type="unfinished"></translation>
+        <source>Error</source>
+        <translation>エラー</translation>
     </message>
-</context>
-<context>
-    <name>design/admin/popupmenu</name>
     <message>
-        <source>Upload multiple files</source>
-        <translation type="unfinished"></translation>
+        <source>Could not load flash(or not loaded yet), this is needed for multiupload!</source>
+        <translation>フラッシュを読み込めませんでした、マルチアップロードに必要です!</translation>
+    </message>
+    <message>
+        <source>Javascript has been disabled, this is needed for multiupload!</source>
+        <translation>Javascriptが無効です、マルチアップロードに必要です!</translation>
     </message>
 </context>
 </TS>
