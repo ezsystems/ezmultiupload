@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0">
+<!DOCTYPE TS><TS>
 <context>
     <name>design/admin/popupmenu</name>
     <message>
@@ -60,11 +58,11 @@
     </message>
     <message>
         <source>Could not load flash(or not loaded yet), this is needed for multiupload!</source>
-        <translation>Impossible de charger Flash (ou pas encore chargé), c'est un pré-requis au téléchargement multiple !</translation>
+        <translation>Impossible de charger Flash (ou pas encore chargé), c&apos;est un pré-requis au téléchargement multiple !</translation>
     </message>
     <message>
         <source>Javascript has been disabled, this is needed for multiupload!</source>
-        <translation>JavaScript est désactivé, c'est un pré-requis au téléchargement multiple !</translation>
+        <translation>JavaScript est désactivé, c&apos;est un pré-requis au téléchargement multiple !</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de_DE" sourcelanguage="en">
+<!DOCTYPE TS><TS>
 <context>
     <name>design/admin/popupmenu</name>
     <message>
@@ -53,6 +51,18 @@
     <message>
         <source>Upload canceled.</source>
         <translation>Der Upload wurde abgebrochen.</translation>
+    </message>
+    <message>
+        <source>Allowed Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not load flash(or not loaded yet), this is needed for multiupload!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Javascript has been disabled, this is needed for multiupload!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

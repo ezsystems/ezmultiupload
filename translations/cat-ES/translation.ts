@@ -1,5 +1,12 @@
 <!DOCTYPE TS><TS>
 <context>
+    <name>design/admin/popupmenu</name>
+    <message>
+        <source>Upload multiple files</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>extension/ezmultiupload</name>
     <message>
         <source>Multiupload</source>
@@ -19,11 +26,11 @@
     </message>
     <message>
         <source>Unable to load Flash content. You can download the latest version of Flash Player from the</source>
-        <translation>No es pot carregar el contingut Flash. Pot descarregar l&apos;última versió del Flash Player a</translation>
+        <translation type="obsolete">No es pot carregar el contingut Flash. Pot descarregar l&apos;última versió del Flash Player a</translation>
     </message>
     <message>
         <source>Adobe Flash Player Download Center</source>
-        <translation>Centre de descàrregues d&apos;Adobe Flash Player</translation>
+        <translation type="obsolete">Centre de descàrregues d&apos;Adobe Flash Player</translation>
     </message>
     <message>
         <source>All files received.</source>
@@ -35,7 +42,7 @@
     </message>
     <message>
         <source>Starting...</source>
-        <translation>Iniciant...</translation>
+        <translation type="obsolete">Iniciant...</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -45,11 +52,16 @@
         <source>Upload canceled.</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>design/admin/popupmenu</name>
     <message>
-        <source>Upload multiple files</source>
+        <source>Allowed Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not load flash(or not loaded yet), this is needed for multiupload!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Javascript has been disabled, this is needed for multiupload!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

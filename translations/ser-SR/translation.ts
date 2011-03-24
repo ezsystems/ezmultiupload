@@ -1,5 +1,12 @@
 <!DOCTYPE TS><TS>
 <context>
+    <name>design/admin/popupmenu</name>
+    <message>
+        <source>Upload multiple files</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>extension/ezmultiupload</name>
     <message>
         <source>Error</source>
@@ -7,7 +14,7 @@
     </message>
     <message>
         <source>Starting...</source>
-        <translation>Početni...</translation>
+        <translation type="obsolete">Početni...</translation>
     </message>
     <message>
         <source>All files received.</source>
@@ -15,11 +22,11 @@
     </message>
     <message>
         <source>Unable to load Flash content. You can download the latest version of Flash Player from the</source>
-        <translation>Nemoguće učitati Flash sadržaj. Možete preuzeti poslednju verziju Flash Player-a na ovoj lokaciji</translation>
+        <translation type="obsolete">Nemoguće učitati Flash sadržaj. Možete preuzeti poslednju verziju Flash Player-a na ovoj lokaciji</translation>
     </message>
     <message>
         <source>Adobe Flash Player Download Center</source>
-        <translation>Adobe Flash Player Download Center</translation>
+        <translation type="obsolete">Adobe Flash Player Download Center</translation>
     </message>
     <message>
         <source>The files are uploaded to</source>
@@ -45,11 +52,16 @@
         <source>Upload canceled.</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>design/admin/popupmenu</name>
     <message>
-        <source>Upload multiple files</source>
+        <source>Allowed Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Could not load flash(or not loaded yet), this is needed for multiupload!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Javascript has been disabled, this is needed for multiupload!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
