@@ -35,8 +35,7 @@
             {rdelim};
             YAHOO.ez.MultiUpload.init();
         {rdelim},
-        timeout: 10000,
-        combine: true
+        timeout: 10000
     {rdelim}, "js");
 {rdelim})();
 </script>
