@@ -52,11 +52,11 @@
     </message>
     <message>
         <source>Upload canceled.</source>
-        <translation>Upload annulé.</translation>
+        <translation>Transfert annulé.</translation>
     </message>
     <message>
         <source>Allowed Files</source>
-        <translation>Types de fichier permis</translation>
+        <translation>Formats de fichiers autorisés</translation>
     </message>
     <message>
         <source>Could not load flash(or not loaded yet), this is needed for multiupload!</source>
