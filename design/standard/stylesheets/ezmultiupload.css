@@ -30,7 +30,6 @@
 .content-view-ezmultiupload #multiuploadProgress {
     width: 320px;
     display: none;
-    opacity: 0;
     margin: 10px 0;
     padding: 3px;
     border: 1px solid #ffcc00;

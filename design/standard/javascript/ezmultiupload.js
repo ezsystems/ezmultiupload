@@ -29,7 +29,7 @@ YAHOO.ez.MultiUpload = (function()
     var onFileSelect = function(e)
     {
         Dom.setStyle('multiuploadProgress' , 'display', 'block');
-        if( Dom.getStyle('multiuploadProgress' , 'opacity' ) == 0)
+        if ( !Dom.getStyle('multiuploadProgress', 'opacity') )
         {
            fadeAnimate('multiuploadProgress' , 0, 1);
         }
@@ -99,9 +99,13 @@ YAHOO.ez.MultiUpload = (function()
         var id = response.id;
         var data = unescapeHTML(response.data);
 
-        var thumbnail = '<div id="thumbnail_' + id + '" class="thumbnail-block" style="opacity:0;" >' + data + '</div>';
+        var thumbnail = document.createElement('div');
+        thumbnail.innerHTML = data;
+        Dom.addClass(thumbnail, "thumbnail-block");
+        Dom.setAttribute(thumbnail, "id", "thumbnail_" + id);
+        Dom.setStyle(thumbnail, "opacity", 0);
         var thumbnails = Dom.get('thumbnails');
-        thumbnails.innerHTML = thumbnails.innerHTML + thumbnail;
+        thumbnails.appendChild(thumbnail);
 
         fadeAnimate('thumbnail_'+ id, 0, 1);
     };
