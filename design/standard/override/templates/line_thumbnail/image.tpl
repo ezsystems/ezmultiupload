@@ -6,7 +6,7 @@
         <h2>{$node.name|wash|shorten(17)}</h2>
         {/if}
         <div class="content-image">
-            <p>{attribute_view_gui attribute=$node.data_map.image image_class=multiuploadthumbnail href=$node.url_alias|ezurl()}</p>
+            {attribute_view_gui attribute=$node.data_map.image image_class=multiuploadthumbnail href=$node.url_alias|ezurl()}
         </div>
         <div class="thumbnail-class-name"><p>{$node.class_name|wash}</p></div>
     </div>

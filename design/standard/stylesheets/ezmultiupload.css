@@ -7,17 +7,35 @@
     margin-top: 10px;
 }
 
+
+.content-view-ezmultiupload #thumbnails h2 {
+    font-size:15px;
+    line-height:25px;
+    margin:0;
+}
+
+
+.content-view-ezmultiupload #thumbnails p {
+    margin:0;
+}
+
+
+.content-view-ezmultiupload #thumbnails .content-image,
+.content-view-ezmultiupload #thumbnails .attribute-image,
+.content-view-ezmultiupload #thumbnails .thumbnail-move-icon {
+    height:85px;
+    text-align:center;
+}
+
 .content-view-ezmultiupload .thumbnail-block {
-    padding: 5px;
+    padding: 5px 5px 0 5px;
     margin: 5px;
     border: 3px solid #eee;
     float: left;
     width: 130px;
-    height: 150px;
 }
 
 .content-view-ezmultiupload .thumbnail-class-name {
-    clear: both;
     padding: 3px;
     background-color: #efefef;
     text-align: center;
