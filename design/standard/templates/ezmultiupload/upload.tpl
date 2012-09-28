@@ -21,7 +21,6 @@
                 uploadURL: "{concat( 'ezmultiupload/upload/', $parent_node.node_id )|ezurl( 'no' )}",
                 uploadVars: {ldelim}
                                 '{$session_name}': '{$session_id}',
-                                'UserSessionHash': '{$user_session_hash}',
                                 //'XDEBUG_SESSION_START': 'XDEBUG_ECLIPSE',
                                 'UploadButton': 'Upload',
                                 'ezxform_token': '@$ezxFormToken@'

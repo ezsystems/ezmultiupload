@@ -21,7 +21,6 @@
                 uploadURL: "{concat( 'ezmultiupload/upload/', $parent_node.node_id )|ezurl( 'no' )}",
                 uploadVars: {ldelim}
                                 '{$session_name}': '{$session_id}',
-                                'UserSessionHash': '{$user_session_hash}',
                                 'UploadButton': 'Upload'
                             {rdelim},
                 // Filter is passed on to uploader.setFileFilter() in ez.MultiUpload
