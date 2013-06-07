@@ -1,0 +1,16 @@
+{
+    "name": "ezsystems/ezmultiupload-ls",
+    "description": "Multi-upload extension for eZ Publish legacy",
+    "type": "ezpublish-legacy-extension",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "eZ Publish dev-team & eZ Community",
+           "homepage": "https://github.com/ezsystems/ezmultiupload/contributors"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "ezsystems/ezpublish-legacy-installer": "*"
+    }
+}
