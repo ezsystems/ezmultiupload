@@ -24,6 +24,11 @@ if( $module->isCurrentAction( 'Upload' ) )
     // Handle file upload only if there was no errors
     if( empty( $result['errors'] ) )
     {
+        $behaviour = new ezpContentPublishingBehaviour();
+        $behaviour->isTemporary = true;
+        $behaviour->disableAsynchronousPublishing = false;
+        ezpContentPublishingBehaviour::setBehaviour( $behaviour );
+
         // Handle file upload. All checkes are performed by eZContentUpload::handleUpload()
         // and available in $result array
         $upload = new eZContentUpload();

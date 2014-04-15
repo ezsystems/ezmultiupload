@@ -8,5 +8,6 @@
         </ul>
     </div>
 {elseif is_set( $result.contentobject )}
-    {node_view_gui view='line_thumbnail' content_node=$result.contentobject.main_node}
+    {content_view_gui view='line_thumbnail' content_object=$result.contentobject}
 {/if}
+
