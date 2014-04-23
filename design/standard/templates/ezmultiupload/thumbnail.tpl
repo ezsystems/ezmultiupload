@@ -7,6 +7,8 @@
         {/foreach}
         </ul>
     </div>
-{elseif is_set( $result.contentobject )}
+{elseif is_set( $result.contentobject.main_node )}
     {node_view_gui view='line_thumbnail' content_node=$result.contentobject.main_node}
+{elseif is_set( $result.contentobject )}
+    {content_view_gui view='line_thumbnail' content_object=$result.contentobject}
 {/if}
