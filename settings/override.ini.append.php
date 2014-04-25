@@ -47,6 +47,6 @@ Match[class_identifier]=flash_player
 
 [node_line_thumbnail_file]
 Source=node/view/line_thumbnail.tpl
-MatchFile=node/view/line_thumbnail/file.tpl
+MatchFile=line_thumbnail/file.tpl
 Subdir=templates
 Match[class_identifier]=file
