@@ -1,32 +1,32 @@
 {ezscript_require( array( 'ezjsc::yui3', 'ezjsc::yui3io') )}
 {ezcss_require( 'ezmultiupload.css' )}
 <script type="text/javascript">
-YUI({ldelim}
-    modules: {ldelim}
-        ezmultiupload: {ldelim}
-            type: 'js',
-            fullpath: '{"javascript/ezmultiupload.js"|ezdesign( 'no' )}',
-            requires: ["uploader", "node", "event-base", "json-parse", "anim"],
-            after: ["uploader"],
-            skinnable: false
-        {rdelim}
-    {rdelim}
-{rdelim}).use('ezmultiupload', function (Y) {ldelim}
-    Y.ez.MultiUpload.cfg = {ldelim}
-        uploadURL: "{concat( 'ezmultiupload/upload/', $parent_node.node_id )|ezurl( 'no' )}",
-        uploadVars: {ldelim}
-            '{$session_name}': '{$session_id}',
-            //'XDEBUG_SESSION_START': 'XDEBUG_ECLIPSE',
-            'UploadButton': 'Upload',
-            'ezxform_token': '@$ezxFormToken@'
+(function(config){ldelim}
+    config['modules']['ezmultiupload'] = {ldelim}
+        type: 'js',
+        fullpath: '{"javascript/ezmultiupload.js"|ezdesign( 'no' )}',
+        requires: ["uploader", "node", "event-base", "json-parse", "anim"],
+        after: ["uploader"],
+        skinnable: false
+    {rdelim};
+
+    YUI(config).use('ezmultiupload', function (Y) {ldelim}
+        Y.ez.MultiUpload.cfg = {ldelim}
+            uploadURL: "{concat( 'ezmultiupload/upload/', $parent_node.node_id )|ezurl( 'no' )}",
+            uploadVars: {ldelim}
+                '{$session_name}': '{$session_id}',
+                //'XDEBUG_SESSION_START': 'XDEBUG_ECLIPSE',
+                'UploadButton': 'Upload',
+                'ezxform_token': '@$ezxFormToken@'
             {rdelim},
-        allFilesRecived:  "{'All files received.'|i18n('extension/ezmultiupload')|wash(javascript)}",
-        uploadCanceled:   "{'Upload canceled.'|i18n('extension/ezmultiupload')|wash(javascript)}",
-        thumbnailCreated: "{'Thumbnail created.'|i18n('extension/ezmultiupload')|wash(javascript)}",
-        multipleFiles: true
+            allFilesRecived:  "{'All files received.'|i18n('extension/ezmultiupload')|wash(javascript)}",
+            uploadCanceled:   "{'Upload canceled.'|i18n('extension/ezmultiupload')|wash(javascript)}",
+            thumbnailCreated: "{'Thumbnail created.'|i18n('extension/ezmultiupload')|wash(javascript)}",
+            multipleFiles: true
         {rdelim};
-    Y.ez.MultiUpload.init();
-{rdelim});
+        Y.ez.MultiUpload.init();
+    {rdelim});
+{rdelim})(YUI3_config);
 </script>
 
 <div class="border-box">
