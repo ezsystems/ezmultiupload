@@ -17,8 +17,6 @@ YUI.add('ezmultiupload', function (Y) {
 
             Y.ez.MultiUpload.uploader.uploadAll(Y.ez.MultiUpload.cfg.uploadURL, Y.ez.MultiUpload.cfg.uploadVars);
 
-            Y.one('#uploadButton').disabled = true;
-
             var cancelUploadButton = Y.one('#cancelUploadButton');
             cancelUploadButton.setStyle('visibility', 'visible');
             cancelUploadButton.on('click', cancelUpload, this, true);
@@ -52,7 +50,6 @@ YUI.add('ezmultiupload', function (Y) {
             Y.one('#multiuploadProgressMessage').setHTML(Y.ez.MultiUpload.cfg.thumbnailCreated);
             Y.one('#multiuploadProgressBar').setStyle('width', '100%');
 
-            Y.one('#uploadButton').disabled = false;
             Y.one('#multiuploadProgressMessage').setHTML(Y.ez.MultiUpload.cfg.allFilesRecived);
 
             var fileCount = Y.ez.MultiUpload.originalFileList.length;
@@ -94,7 +91,6 @@ YUI.add('ezmultiupload', function (Y) {
             Y.ez.MultiUpload.uploader.set('fileList', []);
 
             Y.one('#multiuploadProgressMessage').setHTML(Y.ez.MultiUpload.cfg.uploadCanceled);
-            Y.one('#uploadButton').disabled = false;
         };
 
         var fadeAnimate = function (elementID, fromValue, toValue) {
@@ -142,12 +138,6 @@ YUI.add('ezmultiupload', function (Y) {
 
             init: function () {
                 Y.on('domready', function () {
-                    var uploadButton = Y.one('#uploadButton');
-                    var overlay = Y.one('#uploadButtonOverlay');
-
-                    overlay.setStyle('width', uploadButton.right - uploadButton.left + "px");
-                    overlay.setStyle('height', uploadButton.bottom - uploadButton.top + "px");
-
                     Y.Uploader = Y.UploaderHTML5;
                     Y.ez.MultiUpload.uploader = new Y.Uploader();
 
