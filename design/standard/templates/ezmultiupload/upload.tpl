@@ -22,6 +22,7 @@
             allFilesRecived:  "{'All files received.'|i18n('extension/ezmultiupload')|wash(javascript)}",
             uploadCanceled:   "{'Upload canceled.'|i18n('extension/ezmultiupload')|wash(javascript)}",
             thumbnailCreated: "{'Thumbnail created.'|i18n('extension/ezmultiupload')|wash(javascript)}",
+            selectButtonLabel: "{'Select files'|i18n('extension/ezmultiupload')|wash(javascript)}",
             multipleFiles: true
         {rdelim};
         Y.ez.MultiUpload.init();

@@ -139,7 +139,7 @@ YUI.add('ezmultiupload', function (Y) {
             init: function () {
                 Y.on('domready', function () {
                     Y.Uploader = Y.UploaderHTML5;
-                    Y.ez.MultiUpload.uploader = new Y.Uploader();
+                    Y.ez.MultiUpload.uploader = new Y.Uploader({selectButtonLabel: Y.ez.MultiUpload.cfg.selectButtonLabel});
 
                     if (Y.Uploader.TYPE == "html5") {
                         Y.ez.MultiUpload.uploader.set("uploadURL", Y.ez.MultiUpload.cfg.uploadURL);
