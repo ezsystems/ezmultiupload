@@ -75,6 +75,20 @@
     background-color: #fc8c00;
 }
 
+.content-view-ezmultiupload #uploadButtonOverlay {
+    max-width: 40%;
+}
+
 .content-view-ezmultiupload #cancelUploadButton {
     visibility: hidden;
+    width: 40%;
+    margin-top: 1em;
+    border: none rgba(0,0,0,0);
+    background-color: #e6e6e6;
+    font-size: 100%;
+    padding: .4em 1em .45em;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.25) inset, 0 2px 0 rgba(255,255,255,0.30) inset, 0 1px 2px rgba(0,0,0,0.15);
+    background-image: linear-gradient(rgba(255,255,255,0.30),rgba(255,255,255,0.15) 40%,transparent);
+    transition: .1s linear box-shadow;
+    border-radius: 4px;
 }
