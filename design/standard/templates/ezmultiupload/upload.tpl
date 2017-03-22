@@ -42,7 +42,7 @@
     </div>
         <div class="attribute-description">
             <p>{'The files are uploaded to'|i18n('extension/ezmultiupload')} <a href={$parent_node.url_alias|ezurl}>{$parent_node.name|wash}</a></p>
-            <div id="uploadButtonOverlay" style="position: absolute; z-index: 2"></div>
+            <div id="uploadButtonOverlay"></div>
             <button id="cancelUploadButton" type="button">{'Cancel'|i18n('extension/ezmultiupload')}</button>
             <p><noscript><em style="color: red;">{'Javascript has been disabled, this is needed for multiupload!'|i18n('extension/ezmultiupload')}</em></noscript></p>
         </div>
