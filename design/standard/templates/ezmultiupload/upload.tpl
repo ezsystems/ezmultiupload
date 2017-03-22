@@ -22,6 +22,7 @@
             allFilesRecived:  "{'All files received.'|i18n('extension/ezmultiupload')|wash(javascript)}",
             uploadCanceled:   "{'Upload canceled.'|i18n('extension/ezmultiupload')|wash(javascript)}",
             thumbnailCreated: "{'Thumbnail created.'|i18n('extension/ezmultiupload')|wash(javascript)}",
+            selectButtonLabel: "{'Select files'|i18n('extension/ezmultiupload')|wash(javascript)}",
             multipleFiles: true
         {rdelim};
         Y.ez.MultiUpload.init();
@@ -42,7 +43,6 @@
         <div class="attribute-description">
             <p>{'The files are uploaded to'|i18n('extension/ezmultiupload')} <a href={$parent_node.url_alias|ezurl}>{$parent_node.name|wash}</a></p>
             <div id="uploadButtonOverlay" style="position: absolute; z-index: 2"></div>
-            <button id="uploadButton" type="button" style="z-index: 1">{'Select files'|i18n('extension/ezmultiupload')}</button>
             <button id="cancelUploadButton" type="button">{'Cancel'|i18n('extension/ezmultiupload')}</button>
             <p><noscript><em style="color: red;">{'Javascript has been disabled, this is needed for multiupload!'|i18n('extension/ezmultiupload')}</em></noscript></p>
         </div>
