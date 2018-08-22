@@ -23,3 +23,5 @@ Source=content/view/line_thumbnail.tpl
 MatchFile=content/view/line_thumbnail/file.tpl
 Subdir=templates
 Match[class_identifier]=file
+
+*/
